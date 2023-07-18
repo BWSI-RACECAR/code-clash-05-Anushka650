@@ -109,11 +109,11 @@ MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
 class Solution:
     def encrypt(self, message):
         message = message.upper().strip()
-        morse = []
+        morse = " "
         for char in message:
             if char in self.MORSE_CODE_DICT:
-                morse.append(self.MORSE_CODE_DICT[char])
-        return ' '.join(morse)
+                morse += self.MORSE_CODE_DICT[char]
+        return morse
             #type message: string
             #return type: string
 
